@@ -11,5 +11,3 @@ package App::ScreensaverUtils;
 This distribution contains the following CLI utilities related to screensaver:
 
 # INSERT_EXECS_LIST
-
-=back
