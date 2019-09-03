@@ -1,3 +1,9 @@
+0.005   2019-09-03  Released-By: PERLANCAR; Urgency: medium
+
+	- Add utility: prevent-screensaver-activated-until-interrupted
+	  (with shorter aliases: pause-screensaver, noss).
+
+
 0.004   2019-04-30  Released-By: PERLANCAR
 
 	- Add utility: prevent-screensaver-activated-while.
