@@ -40,6 +40,37 @@ sub prevent_screensaver_activated_while {
     [200, "Exit code is $exit", "", {"cmdline.exit_code"=>$exit}];
 }
 
+$SPEC{prevent_screensaver_activated_until_interrupted} = {
+    v => 1.1,
+    summary => 'Prevent screensaver activated until interrupted',
+    description => <<'_',
+
+Uses <pm:Proc::Govern> to run `sleep infinity`. To stop preventing screensaver
+from sleeping, press Ctrl-C.
+
+For more options when running command, e.g. timeout, load control, autorestart,
+use the module or its CLI <prog:govproc> instead.
+
+Available in CLI with two shorter aliases: <prog:pause-screensaver> and
+<prog:noss>.
+
+_
+    args => {
+    },
+};
+sub prevent_screensaver_activated_until_interrupted {
+    require Proc::Govern;
+
+    my %args = @_;
+
+    my $exit = Proc::Govern::govern_process(
+        command => ['sleep', 'infinity'],
+        no_screensaver => 1,
+    );
+
+    [200, "Exit code is $exit", "", {"cmdline.exit_code"=>$exit}];
+}
+
 1;
 # ABSTRACT: CLI utilities related to screensaver
 
