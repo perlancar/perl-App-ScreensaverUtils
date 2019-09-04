@@ -1,3 +1,8 @@
+0.006   2019-09-04  Released-By: PERLANCAR; Urgency: medium
+
+	- Add utility: get-screenasver-info.
+
+
 0.005   2019-09-03  Released-By: PERLANCAR; Urgency: medium
 
 	- Add utility: prevent-screensaver-activated-until-interrupted
