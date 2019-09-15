@@ -14,8 +14,11 @@ $SPEC{prevent_screensaver_activated_while} = {
     summary => 'Prevent screensaver activated while running a command',
     description => <<'_',
 
-Uses <pm:Proc::Govern>. For more options when running command, e.g. timeout,
-load control, autorestart, use the module or its CLI <prog:govproc> instead.
+Uses <pm:Proc::Govern> to run a command, with the option `no-screensaver' to
+instruct Proc::Govern to regularly simulate user activity, thus preventing the
+screensaver from ever activating while running the command. For more options
+when running command, e.g. timeout, load control, autorestart, use the module or
+its CLI <prog:govproc> directly.
 
 _
     args => {
