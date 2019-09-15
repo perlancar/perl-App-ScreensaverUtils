@@ -71,6 +71,8 @@ sub prevent_screensaver_activated_until_interrupted {
 
     my %args = @_;
 
+    print "Now preventing screensaver from being activated. ",
+        "Press Ctrl-C to stop.\n";
     my $exit = Proc::Govern::govern_process(
         command => ['sleep', 'infinity'],
         no_screensaver => 1,
