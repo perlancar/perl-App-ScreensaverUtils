@@ -6,6 +6,7 @@ package App::ScreensaverUtils;
 use 5.010001;
 use strict;
 use warnings;
+no warnings 'once'; # use of %arg_screensaver
 
 use Screensaver::Any ();
 
