@@ -50,11 +50,13 @@ $SPEC{prevent_screensaver_activated_until_interrupted} = {
     summary => 'Prevent screensaver activated until interrupted',
     description => <<'_',
 
-Uses <pm:Proc::Govern> to run `sleep infinity`. To stop preventing screensaver
-from sleeping, press Ctrl-C.
+Uses <pm:Proc::Govern> to run `sleep infinity`, with the option `no-screensaver'
+to instruct Proc::Govern to regularly simulate user activity, thus preventing
+the screensaver from ever activating. To stop preventing screensaver from
+sleeping, press Ctrl-C.
 
 For more options when running command, e.g. timeout, load control, autorestart,
-use the module or its CLI <prog:govproc> instead.
+use the module or its CLI <prog:govproc> directly.
 
 Available in CLI with two shorter aliases: <prog:pause-screensaver> and
 <prog:noss>.
